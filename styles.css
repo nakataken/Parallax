@@ -1,0 +1,262 @@
+/* colors #fff White #f4f4f4 Whit Smoke #666 Dove Gray  #b83b5e Red*/
+/* Imported font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+  font-weight: 400;
+  color: #666;
+}
+
+header {
+  margin: 0px;
+  padding: 10px;
+  color: #f4f4f4;
+  background-color: #666;
+  clear: both;
+}
+
+.big-section,
+#main-section-jp,
+#main-section-kr,
+#main-section-ph,
+.section-one-img,
+.section-two-img,
+.section-three-img,
+#about-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+  position: relative;
+}
+
+.main-border a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#main-section-jp {
+  background-image: url("./assets/Japan.jpg");
+}
+
+#main-section-kr {
+  background-image: url("./assets/Korea.webp");
+}
+
+#main-section-ph {
+  background-image: url("./assets/Philippines.jpg");
+}
+
+.big-section {
+  min-height: 100%;
+}
+
+.section-one-img,
+.section-two-img,
+.section-three-img {
+  min-height: 400px;
+}
+
+#tokyo {
+  background-image: url("assets/Tokyo.jpg");
+}
+
+#kyoto {
+  background-image: url("assets/Kyoto.jpg");
+}
+
+#osaka {
+  background-image: url("assets/Osaka.jpg");
+}
+
+#seoul {
+  background-image: url("./assets/Seoul.jpg");
+}
+
+#busan {
+  background-image: url("./assets/Busan.jpg");
+}
+
+#gyeongju {
+  background-image: url("./assets/Gyeongju.webp");
+}
+
+#manila {
+  background-image: url("./assets/Manila.jpg");
+}
+
+#cebu {
+  background-image: url("./assets/Cebu.jpg");
+}
+
+#baguio {
+  background-image: url("./assets/Baguio.jpg");
+}
+
+.country,
+.image-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.country .main-border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 20px;
+}
+
+.main-border a:hover,
+.country .main-border:hover {
+  color: #b83b5e;
+}
+
+.country .main-border:hover {
+  cursor: none;
+}
+
+.image-text .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.image-text .border:hover {
+  cursor: none;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 50px 80px;
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+footer {
+  margin: 0px;
+  text-align: center;
+  padding: 10px;
+  color: #f4f4f4;
+  background-color: #666;
+  clear: both;
+}
+
+header ul,
+footer ul {
+  list-style: none;
+}
+
+header li,
+footer li {
+  display: inline;
+}
+
+footer a {
+  color: #f4f4f4;
+  font-size: 18px;
+  padding: 15px;
+  text-decoration: none;
+}
+
+header a:hover,
+footer a:hover {
+  color: #b83b5e;
+}
+
+/* checkbox */
+.show-more-state {
+  display: none;
+}
+
+/* more texts */
+.show-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+
+/* If show more button(check box) is checked, show more text */
+.show-more-state:checked ~ .show-more-wrap .show-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+/* If show more button(check box) is unchecked */
+.show-more-state ~ .show-more-trigger:before {
+  content: "Show more";
+}
+
+/* If show more button(check box) is checked */
+.show-more-state:checked ~ .show-more-trigger:before {
+  content: "Show less";
+}
+
+/* Show more button */
+.show-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0.5em;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: 0.25em;
+}
+
+header a {
+  margin: auto;
+  padding: auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f4f4f4;
+  display: inline;
+  margin: 0px 5px;
+  padding: 0px 5px;
+}
+
+.icons {
+  font-size: 25px;
+}
+
+#about-section {
+  background-color: #f4f4f4;
+  min-height: 100%;
+  overflow: auto;
+}
+
+#about #about-border {
+  position: absolute;
+  margin: 20px 200px;
+  padding: 20px 20px;
+  background-color: #666;
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* For devices that have maximum of 568px width */
+@media (max-width: 568px) {
+  #section-one-img,
+  #section-two-img,
+  #section-three-img {
+    background-attachment: scroll;
+  }
+}
